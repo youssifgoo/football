@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login - footboll test</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+        body{
+            background: purple;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .contenr{
+            background: gold;
+            width: 420px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 20px;
+            color: white;
+            position: relative;
+        }
+        .contenr::after, .contenr::before{
+            content: "";
+            position: absolute;
+            color: aqua;
+            padding: 5px;
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            animation: con 3s linear infinite;
+        }
+        .contenr::before{
+            filter: blur(1.5rem);
+            opacity: 0.5;
+        }
+        @keyframes con{
+            from{
+                background-image: conic-gradient(from 0deg, transparent 0%, white);
+
+            }
+            to{
+                background-image: conic-gradient(from 360deg, transparent 100%, white);
+
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="contenr">
+        <h1>login</h1>
+        <div class="inbuts">
+            <input type="text" required placeholder="username">
+        </div>
+        <div class="inbuts">
+            <input type="password" required placeholder="password">
+        </div>
+        <div class="forgert">
+            <a href="#">forget password</a>
+        </div>
+        <div class="sub">
+            <input type="submit" required>
+        </div>
+        <div class="singin">
+            <a href="#">singin</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>football test</title>
+    <link rel="icon" href="cup/ballon.png">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            text-transform: uppercase;
+        }
+        .contener{
+            width: 700px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: none;
+            backdrop-filter: blur(20px);
+            border: 5px solid black;
+            box-shadow: 0px 0px 100px black;
+            padding: 20px;
+            border-radius: 50px;
+        }
+        .contener .top{
+            border-radius: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .contener .top .data{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .contener .top .data img{
+            
+            margin: 0 10px;
+            background: gold;
+            border-radius: 20px;
+            border: 3px solid black;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+        .contener .top .data img:hover{
+            box-shadow: 0 0 1px 5px white;
+        }
+        .contener .top button{
+            width: 150px;
+            height: 180px;
+            font-size: 40px;
+            border-radius: 20px;
+            border: 3px solid black;
+            background: tomato;
+            color: white;
+            margin: 0 10px;
+            transition: 0.1s;
+        }
+        .contener .top button:hover{
+            background: white;
+            color: black;
+        }
+        .contener .buttom{
+            width: 100%;
+            height: 100%;
+        }
+        .contener .buttom .chang{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .contener .buttom .chang img{
+            margin: 0 10px;
+            background: seagreen;
+            border-radius: 20px;
+            border: 3px solid black;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .contener .buttom .chang img:hover{
+            box-shadow: 0 0 1px 3px white;
+        }
+        .lost{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: auto;
+            height: 500px;
+            text-align: center;
+        }
+        .h1{
+            color: red;
+            font-size: 150px;
+            box-shadow: 0px 0px 100px rgb(0, 0, 0);
+            text-shadow: 0px 0px 30px rgb(0, 0, 0);
+            border-radius: 50px;
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            border: 10px solid red;
+            transition: 0.5s;
+            width: 100%;
+        }
+        .w1{
+            color: rgb(7, 224, 90);
+            font-size: 150px;
+            box-shadow: 0px 0px 100px rgb(0, 0, 0);
+            text-shadow: 0px 0px 30px rgb(0, 0, 0);;
+            border-radius: 50px;
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            border: 10px solid rgb(7, 224, 90);;
+            transition: 0.5s;
+            width: 100%;
+        }
+
+        .h{
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            box-shadow: 0px 0px 100px rgb(0, 0, 0);
+            text-shadow: 0px 0px 30px rgb(255, 255, 255);
+            border-radius: 50px;
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            border: 3px solid white;
+            transition: 0.5s;
+            width: 500px;
+            
+        }
+        .h2{
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            box-shadow: 0px 0px 100px rgb(0, 0, 0);
+            text-shadow: 0px 0px 30px rgb(255, 255, 255);
+            border-radius: 50px;
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            border: 3px solid white;
+            transition: 0.5s;
+            width: 400px;
+        }
+        .h3{
+            width: 100px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            box-shadow: 0px 0px 100px rgb(0, 0, 0);
+            text-shadow: 0px 0px 30px rgb(255, 255, 255);
+            border-radius: 50px;
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            border: 3px solid white;
+            transition: 0.5s;
+            margin: 20px;
+        }
+        .aut{
+            width:  0px;
+            height: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .rechan{
+            cursor: pointer;
+        }
+@media(max-width: 850px){
+    .lost{
+        width: 400px;
+    }
+    .h{
+        font-size: 35px;
+    }
+    .h1{
+        font-size: 100px;
+    }
+    .w1{
+        font-size: 100px;
+    }
+    .h2{
+        font-size: 35px;
+    }
+    .contener{
+        width: 450px;
+        padding: 40px;
+    }
+    .contener .top .data img{
+        width: 150px;
+        height: 150px;
+    }
+    .contener .top button{
+        width: 100px;
+        height: 120px;
+        font-size: 30px;
+    }
+    .contener .buttom{
+            width: 120%;
+            height: 120%;
+        }
+
+}
+@media(max-width: 600px){
+    body{
+        flex-direction: column;
+    }
+    .h3{
+        font-size: 30px;
+        width: 300px;
+    }
+    .h3::before{
+            content: "your score: ";
+        }
+        .lost{
+            width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .h{
+            width: 350px;
+        }
+        .h2{
+            width: 320px;
+        }
+
+
+}
+    </style>
+</head>
+<body id="body" dir="rtl" style="background-image: url(images.jpg);background-size: cover; display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+    <h1 id="h" class="h3">0</h1>
+    <div id="aut" class="aut">
+    </div>
+    <!-- ALL ITEMS -->
+    <div class="contener">
+
+        <!-- top list -->
+        <div class="top">
+            <div class="data">
+                <div class="img">
+                    <img id="img" src="" width="200px" height="200px">
+                </div>
+                <button id="rechan" class="rechan">تدوير</button>
+                <button id="n" class="rechan">10</button>
+
+            </div>
+        </div>
+        <!--// top list //-->
+
+        <!-- buttom list -->
+        <div class="buttom">
+            <div class="chang">
+                <div  class="num1">
+                    <img id="num" class="num" src="" class="img2" width="120px" height="120px">
+                </div>
+                <div  class="num1">
+                    <img id="num" class="num" src="" class="img2" width="120px" height="120px">
+                </div>
+                <div  class="num1">
+                    <img id="num" class="num" src="" class="img2" width="120px" height="120px">
+                </div>
+                <div  class="num1">
+                    <img id="num" class="num" src="" class="img2" width="120px" height="120px">
+                </div>
+                <div  class="num1">
+                    <img id="num" class="num" src="" class="img2" width="120px" height="120px">
+                </div>
+                <div  class="num1">
+                    <img id="num" class="num" src="" class="img2" width="120px" height="120px">
+                </div>
+                <div  class="num1">
+                    <img id="num" class="num" src="" class="img2" width="120px" height="120px">
+                </div>
+                <div  class="num1">
+                    <img id="num" class="num" src="" class="img2" width="120px" height="120px">
+                </div>
+                <div  class="num1">
+                    <img id="num" class="num" src="" class="img2" width="120px" height="120px">
+                </div>
+                <div  class="num1">
+                    <img id="num" class="num" src="" class="img2" width="120px" height="120px">
+                </div>
+                <div  class="num1">
+                    <img id="num" class="num" src="" class="img2" width="120px" height="120px">
+                </div>
+                <div  class="num1">
+                    <img id="num" class="num" src="" class="img2" width="120px" height="120px">
+                </div>
+
+            </div>
+        </div>
+        <!--// buttom list //-->
+        
+    </div>
+        <!--// ALL ITEMS //-->
+</body>
+
+<script src="players.js"></script>
+<script src="clups.js"></script>
+<script src="cups.js"></script>
+<script src="elected.js"></script>
+<script src="lega.js"></script>
+
+<script>
+    let p = ""
+    let sr = ""
+    let arr = [clubs, cubs, elect, leg]
+    let hatrek = 0
+
+    function clups(){
+        let element = document.querySelectorAll(".num")
+        element.forEach(img =>{       
+            let num
+            let array = arr[Math.floor(Math.random() * arr.length)]
+            num = Math.floor(Math.random() * array.length)
+            img.src = array[num].img
+            img.id = array[num].clup
+        
+})}
+    clups()
+    function list(){
+        let num = Math.floor(Math.random() * players.length)
+        sr = players[num].img
+        document.getElementById("img").src = sr
+        p = players[num].clu
+    }
+    list()
+    let win = 0
+    document.querySelectorAll(".num").forEach(img => img.addEventListener("click", function(){
+    document.getElementById("aut").innerHTML = `<audio src="efficts/click.mp3" controls autoplay></audio>`
+        let img = document.getElementById("img").src
+        if(p.includes(this.id)){
+            hatrek++
+            console.log(typeof hatrek, hatrek)
+            this.src = img
+            this.id = "play"
+            list()
+            win++
+            document.getElementById("h").innerText = win
+            document.getElementById("aut").innerHTML = `<audio src="efficts/coin.mp3" controls autoplay></audio>`
+        }else{
+            win--
+            document.getElementById("h").innerText = win
+            document.getElementById("aut").innerHTML = `<audio src="efficts/untitled.mp3" controls autoplay></audio>`
+            hatrek = 0
+        }
+        if(hatrek === 3){
+            setTimeout(() => {
+            win++
+            document.getElementById("h").innerText = win
+            document.getElementById("aut").innerHTML = `<audio src="efficts/hatrek.mp3" controls autoplay></audio>`
+            hatrek = 0}, 500)
+        }
+        if([...document.querySelectorAll(".num")].every(el => el.id === "play")){
+            document.getElementById("body").innerHTML =
+                `<div class="lost">
+                <h1 id="h1" class="w1" >you win</h1>
+                <h1  id="h" class="h">your scorre: ${win}</h1>
+                <a class="h2" href="#" onclick="location.reload(); return false;">play ageen</a>
+                <audio class="aut" src="efficts/Project_64.mp3" controls autoplay></audio>
+                </div>`
+        }
+        if(win < 0){
+            document.getElementById("body").innerHTML =
+        `<div class="lost">
+        <h1 id="h1" class="h1" >game over</h1>
+        <a class="h2" href="#" onclick="location.reload(); return false;">play ageen</a>
+        <h1  id="h" class="h">your scorre: ${win}</h1>
+        </div>
+        <audio class="aut" src="efficts/lost.mp3" controls autoplay></audio>`
+        }
+
+    }))
+    let nu = document.getElementById("n").innerText
+        document.getElementById("rechan").addEventListener("click", function(){
+            document.getElementById("aut").innerHTML = `<audio src="efficts/chang.mp3" controls autoplay></audio>`
+    list()
+    hatrek = 0
+    nu = (nu-1)
+    document.getElementById("n").innerText = (nu)
+    if(nu === 0){
+        document.getElementById("body").innerHTML =
+        `<div class="lost">
+        <h1 id="h1" class="h1" >game over</h1>
+        <a class="h2" href="#" onclick="location.reload(); return false;">play ageen</a>
+        <h1  id="h" class="h">your scorre: ${win}</h1>
+        </div>
+        <audio class="aut" src="efficts/salep.mp3" controls autoplay></audio>`
+    }
+})
+</script>
+</html>
