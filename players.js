@@ -93,7 +93,7 @@ let players = [
    clu: ["leverKusen", "bnfika", "barsa", "leag", "spania", "germa", "omm", "germanCup"]},
 
    {img: `players/kean.png`,
-   clu: ["bayren", "englad", "premir", "germa"]},
+   clu: ["bayren", "englad", "premir", "germa", "germanCup"]},
 
    {img: `players/liva.png`,
    clu: ["barsa", "bayren", "BVB", "championsLeague", "clupsWorled", "spaniacup", "germa", "leag", "germanCup"]},
@@ -192,7 +192,7 @@ let players = [
    clu: ["man United", "juvi", "premir", "ital", "frans", "franse", "warld", "omm"]},
    
    {img: `players/modredc.png`,
-   clu: ["real", "leag", "premir", "clupsWorled", "spaniacup", "championsLeague"]},
+   clu: ["real", "leag", "premir", "clupsWorled", "spaniacup", "championsLeague", "ballon"]},
    
    {img: `players/antony.png`,
    clu: ["man United", "leag", "premir", "brazil"]},
